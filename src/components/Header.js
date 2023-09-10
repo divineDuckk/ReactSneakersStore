@@ -3,7 +3,7 @@ import React from "react";
 function Header(props) {
   return (
     <header className="header">
-      <Link to="">
+      <Link to="/ReactSneakersStore">
         <div className="header-name">
           <img width={40} height={40} src="img/logo.svg" />
           <div className="nameOfSite">
@@ -20,14 +20,14 @@ function Header(props) {
           <span>{props.price} руб.</span>
         </li>
         <li>
-          <Link to="favorites">
+          <Link to="/favorites">
             <button onClick={props.onClickFav}>
               <img src="img/favorite.svg"></img>
             </button>
           </Link>
         </li>
         <li>
-          <Link to="orders">
+          <Link to="/orders">
             <button>
               <img src="img/user.svg"></img>
             </button>

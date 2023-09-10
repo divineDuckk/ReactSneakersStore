@@ -140,7 +140,7 @@ function App() {
 
       <Routes>
         <Route
-          path="favorites"
+          path="/favorites"
           element={
             <Favorite
               favoriteList={favoriteList}
@@ -151,7 +151,7 @@ function App() {
           }
         />
         <Route
-          path=""
+          path="/ReactSneakersStore"
           element={
             <Home
               searchVal={searchVal}
@@ -167,7 +167,7 @@ function App() {
           }
         />
         <Route
-          path="orders"
+          path="/orders"
           element={
             <Orders
               orderList={orderList}
