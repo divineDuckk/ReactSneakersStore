@@ -151,7 +151,7 @@ function App() {
           }
         />
         <Route
-          path="/ReactSneakersStore"
+          path="/"
           element={
             <Home
               searchVal={searchVal}

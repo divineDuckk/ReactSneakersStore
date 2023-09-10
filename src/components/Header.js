@@ -3,7 +3,7 @@ import React from "react";
 function Header(props) {
   return (
     <header className="header">
-      <Link to="/ReactSneakersStore">
+      <Link to="/">
         <div className="header-name">
           <img width={40} height={40} src="img/logo.svg" />
           <div className="nameOfSite">
