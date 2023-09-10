@@ -1,4 +1,6 @@
 import Card from "../components/Card";
+import SneakersCarousel from "../components/Carousel";
+
 function Home(props) {
   const renderItems = () => {
     return (
@@ -31,6 +33,11 @@ function Home(props) {
   };
   return (
     <div className="content">
+      <SneakersCarousel>
+        <img className="carouselImg" src="img/carousel-2.jpg" alt="img2" />
+        <img className="carouselImg" src="img/carousel-1.png" alt="img1" />
+        <img className="carouselImg" src="img/carousel-3.png" alt="img3" />
+      </SneakersCarousel>
       <div className="d-flex align-center justify-between">
         <h1>
           {props.searchVal

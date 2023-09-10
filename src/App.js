@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Favorite from "./pages/Favorite";
 import Orders from "./pages/Orders";
 import { Route, Routes } from "react-router-dom";
-import SneakersCarousel from "./components/Carousel";
 
 function App() {
   const [sneakersList, setSneakersList] = React.useState([]);
@@ -87,7 +86,6 @@ function App() {
     }
   };
   const addToFav = (obj) => {
-    // console.log(checkObjDuplicates(favoriteList, obj));
     if (checkObjDuplicates(favoriteList, obj)) {
       setFavList((prev) => prev.filter((item) => item.id != obj.id));
     } else {
@@ -96,7 +94,6 @@ function App() {
   };
   const deleteFromCart = (index, id) => {
     try {
-      // console.log(index, id);
       axios.delete(
         `https://64f1e1720e1e60602d2465f0.mockapi.io/cartItems/${index}`
       );
@@ -113,6 +110,9 @@ function App() {
   };
 
   const handleCartOpen = (isCartOpen) => () => {
+    isCartOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
     setCartOpen(isCartOpen);
   };
   const calcPrice = () => {
@@ -137,11 +137,7 @@ function App() {
         onCartClick={handleCartOpen(true)}
         price={calcPrice()}
       />
-      <SneakersCarousel>
-        <img className="carouselImg" src="img/carousel-2.jpg" alt="img2" />
-        <img className="carouselImg" src="img/carousel-1.png" alt="img1" />
-        <img className="carouselImg" src="img/carousel-3.png" alt="img3" />
-      </SneakersCarousel>
+
       <Routes>
         <Route
           path="favorites"
