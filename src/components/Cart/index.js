@@ -11,7 +11,7 @@ function Cart({
   addToOrderList,
   isCartOpen,
 }) {
-  console.log(styles);
+ 
   const [isOrderComplite, setOrderComplite] = useState(false);
   const compliteOrder = () => {
     addToOrderList(cartItems);

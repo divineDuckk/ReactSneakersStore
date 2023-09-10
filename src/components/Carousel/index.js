@@ -10,13 +10,13 @@ function SneakersCarousel({ children }) {
     setOffset((prev) => {
       return Math.max(prev - PAGE_WIDTH, -PAGE_WIDTH);
     });
-    console.log(offset);
+   
   };
   const handleClickArrowLeft = () => {
     setOffset((prev) => {
       return Math.min(prev + PAGE_WIDTH, PAGE_WIDTH);
     });
-    console.log(offset);
+ 
   };
   useEffect(() => {
     setPages(
